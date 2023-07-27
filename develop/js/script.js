@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('nav ul li a');
 
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       link.classList.add('active');
 
-      if (link.innerText === 'Log In/Sign Up') {
+      if (link.id === 'signUpLink') {
         const signUpSection = document.querySelector('.signup-form');
         signUpSection.scrollIntoView({ behavior: 'smooth' });
       }
@@ -24,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = signUpForm.elements['username'].value;
     const password = signUpForm.elements['password'].value;
 
+    
     console.log('Username:', username);
     console.log('Password:', password);
 
     signUpForm.reset();
   });
 });
-
