@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>CMS Blog Site</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <header>
@@ -50,7 +50,40 @@
           <button type="submit">Sign Up</button>
         </div>
       </form>
-      <p>Already have an account? <a href="#">Log In</a></p>
+      <p>Already have an account? <a href="#login-form">Log In</a></p>
+    </section>
+    <section class="login-form">
+      <h2>Login</h2>
+      <form id="loginForm" action="#">
+        <div>
+          <label for="loginUsername">Username:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required>
+        </div>
+        <div>
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" name="loginPassword" required>
+        </div>
+        <div>
+          <input type="submit" value="Login">
+        </div>
+      </form>
+    </section>
+    
+    <section class="login-form">
+      <h2>Login</h2>
+      <form id="loginForm" action="#">
+        <div>
+          <label for="loginUsername">Username:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required>
+        </div>
+        <div>
+          <label for="loginPassword">Password:</label>
+          <input type="password" id="loginPassword" name="loginPassword" required>
+        </div>
+        <div>
+          <input type="submit" value="Login">
+        </div>
+      </form>
     </section>
   </main>
 
