@@ -1,0 +1,11 @@
+{{#if blogPosts.length}}
+    {{#each blogPosts}}
+        <div class="blog-post">
+            <h2>{{title}}</h2>
+            <p>{{content}}</p>
+            <p class="meta-info">Posted by {{User.username}} on {{createdAt}}</p>
+            <a href="/post/{{id}}"></a>
+        </div>
+    {{/each}}
+{{else}}
+{{/if}}

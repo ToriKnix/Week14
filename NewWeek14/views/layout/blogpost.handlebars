@@ -1,0 +1,32 @@
+<div class="blog-post">
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <p class="meta-info">Posted by {{User.username}} on {{createdAt}}</p>
+</div>
+
+{{#if isLoggedIn}}
+    <form action="/api/comment/{{id}}" method="post">
+        <label for="comment">Leave a comment:</label>
+        <textarea name="comment" id="comment" rows="4" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+{{/if}}
+
+{{#if Comments.length}}
+    <h3>Comments</h3>
+    {{#each Comments}}
+        <div class="comment">
+            <p>{{content}}</p>
+            <p class="meta-info">Posted by {{User.username}} on {{createdAt}}</p>
+            {{#if isLoggedIn}}
+                {{#ifCond User.id '===' ../User.id}}
+                    <form action="/api/comment/{{../id}}/{{id}}" method="post">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit">Delete</button>
+                    </form>
+                {{/ifCond}}
+            {{/if}}
+        </div>
+    {{/each}}
+{{else}}
+{{/if}}

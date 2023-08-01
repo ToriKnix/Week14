@@ -1,0 +1,12 @@
+  {
+  "production": {
+    "DB_NAME": "techBlog",
+    "DB_USER": "tech_blog",
+    "DB_PASSWORD": "techblog",
+    "DB_HOST": "localhost",
+    "DB_DIALECT": "mysql",
+    "SESSION_MAX_AGE": 3600000
+  }
+}
+
+  
